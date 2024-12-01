@@ -1,32 +1,31 @@
 import {
-    FETCH_USER_LIST_REQUEST,
-    FETCH_USER_LIST_SUCCESS,
-    FETCH_USER_LIST_FAIL,
+    DELETE_USER_REQUEST,
+    DELETE_USER_SUCCESS,
+    DELETE_USER_FAIL,
   } from "../constants/actionTypes";
   
-  const initialState = 
-  {
+  const initialState = {
     loading: false,
     users: [],
     error: null,
   };
   
-  export const userListReducer = (state = initialState, action) => {
+  export const deleteUserReducer = (state = initialState, action) => {
     switch (action.type) {
-      case FETCH_USER_LIST_REQUEST:
+      case DELETE_USER_REQUEST:
         return {
           ...state,
           loading: true,
         };
   
-      case FETCH_USER_LIST_SUCCESS:
+      case DELETE_USER_SUCCESS:
         return {
           ...state,
           loading: false,
-          users: action.payload,
+          users: state.users.filter((user) => user.id !== action.payload),
         };
   
-      case FETCH_USER_LIST_FAIL:
+      case DELETE_USER_FAIL:
         return {
           ...state,
           loading: false,
