@@ -1,0 +1,78 @@
+/* General table styling */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Header row styling */
+  .table thead {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Table row and column styling */
+  .table td, .table th {
+    padding: 20px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  /* Hover effect on rows */
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Image styling */
+  .table img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Alternate row colors for readability */
+  .table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  /* Optional: make the table more responsive */
+  @media (max-width: 768px) {
+    .table thead {
+      font-size: 14px;
+    }
+  
+    .table td, .table th {
+      font-size: 12px;
+    }
+  }
+  
+  /* Styling for the Logout Button */
+.logout-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .logout-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545; /* Bootstrap red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333; /* Darker red for hover */
+    transform: scale(1.05); /* Slight scale-up on hover */
+  }
+  
+  .logout-btn:focus {
+    outline: none; 
+  }
+  
