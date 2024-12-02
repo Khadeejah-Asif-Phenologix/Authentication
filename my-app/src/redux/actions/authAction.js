@@ -121,6 +121,7 @@ export const deleteUser = (userId) => async (dispatch) => {
     dispatch({
       type: DELETE_USER_SUCCESS,
       payload: userId,
+      //my comment
     });
     console.log("User Deleted Successfully", response.data);
   } catch (error) {
