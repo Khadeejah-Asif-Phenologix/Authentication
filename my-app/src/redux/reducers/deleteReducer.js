@@ -18,12 +18,12 @@ import {
           loading: true,
         };
   
-      case DELETE_USER_SUCCESS:
-        return {
-          ...state,
-          loading: false,
-          users: state.users.filter((user) => user.id !== action.payload),
-        };
+        case DELETE_USER_SUCCESS:
+          return {
+            ...state,
+            users: state.users.filter((user) => user.id !== action.payload),
+            loading: false,
+          };        
   
       case DELETE_USER_FAIL:
         return {
